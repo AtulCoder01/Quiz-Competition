@@ -36,10 +36,11 @@ if(isset($_POST['register'])){
 				if(mysqli_query($con, $q)){	
 				$q = "INSERT INTO student_status_tb (stu_id) VALUES ('$stu_id')";
 
-					if(mysqli_query($con, $q)){
+					if(mysqli_query($con, $q)){						
 						$_SESSION['stu_id'] = $stu_id;
 						$_SESSION['passwd'] = $passwd;
-						header('location:profile.php');
+						echo "<script>alert('User Registration Successfully!');</script>";
+            			echo "<script>location.href = 'profile.php'</script>";					
 					}
 				}
 			}
@@ -68,8 +69,7 @@ if(isset($_POST['login'])){
 			// check student already exist or not
 			$q = "SELECT * FROM student_details_tb WHERE stu_id = '$stu_id' AND passwd = '$passwd'";
 			$chk = mysqli_query($con,$q);
-			if(mysqli_num_rows($chk)){
-				echo "<script>alert('User Registration Successfully!');</script>";
+			if(mysqli_num_rows($chk)){				
 				$_SESSION['stu_id'] = $stu_id;
 				$_SESSION['passwd'] = $passwd;
 				header('location:profile.php');	
