@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 17, 2020 at 04:03 PM
+-- Generation Time: Dec 18, 2020 at 10:36 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -330,7 +330,7 @@ CREATE TABLE `student_details_tb` (
 --
 
 INSERT INTO `student_details_tb` (`stu_id`, `name`, `course`, `years`, `mobile`, `dob`, `passwd`) VALUES
-(1501504005, 'Jhon Deo', 'B.Tech', 'First', '8888888888', '1922-11-11', 'e10adc3949ba59abbe56e057f20f883e');
+(1501504005, 'Atul Kumar', 'B.Tech', 'First', '6388404093', '1997-07-11', 'a152e841783914146e4bcd4f39100686');
 
 -- --------------------------------------------------------
 
@@ -340,21 +340,21 @@ INSERT INTO `student_details_tb` (`stu_id`, `name`, `course`, `years`, `mobile`,
 
 CREATE TABLE `student_status_tb` (
   `stu_id` bigint(15) NOT NULL,
-  `level1_status` int(5) NOT NULL,
-  `level2_status` int(11) NOT NULL,
-  `level3_status` int(5) NOT NULL,
-  `level1_marks` int(5) NOT NULL,
-  `level2_marks` int(5) NOT NULL,
-  `level3_marks` int(5) NOT NULL,
-  `level1_attempt_que` int(5) NOT NULL,
-  `level2_attempt_que` int(5) NOT NULL,
-  `level3_attempt_que` int(5) NOT NULL,
-  `level3_true_que` int(5) NOT NULL,
-  `level2_true_que` int(5) NOT NULL,
-  `level1_true_que` int(5) NOT NULL,
-  `level1_wrong_que` int(5) NOT NULL,
-  `level2_wrong_que` int(5) NOT NULL,
-  `level3_wrong_que` int(5) NOT NULL
+  `level1_status` int(5) NOT NULL DEFAULT 0,
+  `level2_status` int(11) NOT NULL DEFAULT 0,
+  `level3_status` int(5) NOT NULL DEFAULT 0,
+  `level1_marks` int(5) NOT NULL DEFAULT 0,
+  `level2_marks` int(5) NOT NULL DEFAULT 0,
+  `level3_marks` int(5) NOT NULL DEFAULT 0,
+  `level1_attempt_que` int(5) NOT NULL DEFAULT 0,
+  `level2_attempt_que` int(5) NOT NULL DEFAULT 0,
+  `level3_attempt_que` int(5) NOT NULL DEFAULT 0,
+  `level3_true_que` int(5) NOT NULL DEFAULT 0,
+  `level2_true_que` int(5) NOT NULL DEFAULT 0,
+  `level1_true_que` int(5) NOT NULL DEFAULT 0,
+  `level1_wrong_que` int(5) NOT NULL DEFAULT 0,
+  `level2_wrong_que` int(5) NOT NULL DEFAULT 0,
+  `level3_wrong_que` int(5) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -362,7 +362,7 @@ CREATE TABLE `student_status_tb` (
 --
 
 INSERT INTO `student_status_tb` (`stu_id`, `level1_status`, `level2_status`, `level3_status`, `level1_marks`, `level2_marks`, `level3_marks`, `level1_attempt_que`, `level2_attempt_que`, `level3_attempt_que`, `level3_true_que`, `level2_true_que`, `level1_true_que`, `level1_wrong_que`, `level2_wrong_que`, `level3_wrong_que`) VALUES
-(1501504005, 1, 0, 0, 6, 0, 0, 10, 0, 0, 0, 0, 3, 7, 0, 0);
+(1501504005, 1, 0, 0, 17, 0, 0, 8, 0, 0, 0, 0, 5, 3, 0, 0);
 
 --
 -- Indexes for dumped tables
