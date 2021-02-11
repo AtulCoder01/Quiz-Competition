@@ -330,7 +330,7 @@ CREATE TABLE `student_details_tb` (
 --
 
 INSERT INTO `student_details_tb` (`stu_id`, `name`, `course`, `years`, `mobile`, `dob`, `passwd`) VALUES
-(1501504005, 'Atul Kumar', 'B.Tech', 'First', '6388404093', '1997-07-11', 'a152e841783914146e4bcd4f39100686');
+(1501504005, 'Test Name', 'B.Tech', 'First', '8888888888', '1999-11-14', 'a152e841783914146e4bcd4f39100686');
 
 -- --------------------------------------------------------
 
